@@ -1,13 +1,16 @@
-import { useState } from "react";
-import Auth from "./components/Auth/Auth";
+import { Route, Routes } from "react-router-dom";
+import EmailVerifyPage from "./pages/EmailVerifyPage/EmailVerifyPage";
+import MainPage from "./pages/MainPage/MainPage";
 
 function App() {
   
-  const [activeAuth, setActiveAuth] = useState(false);
+
   return (
     <>
-    <button onClick={() => setActiveAuth(true)}>Зарегистрироваться</button>
-    <Auth activeAuth={activeAuth} setActiveAuth={setActiveAuth}/>
+      <Routes>
+        <Route path='/' element={<MainPage/>}/>
+        <Route path='user/:id/verify/:token' element={<EmailVerifyPage/>}/>
+      </Routes>
     </>
   );
 }
