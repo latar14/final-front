@@ -9,8 +9,8 @@ const MainPage = () => {
 
     return (
         <>
-        <button onClick={() => setActiveAuth(true)}>Зарегистрироваться</button>
-        <button onClick={()=> setActiveLogin(true)}>Войти</button>
+        <button onClick={() => setActiveAuth(true)}>Create my account</button>
+        <button onClick={()=> setActiveLogin(true)}>Sign in</button>
         <Auth activeAuth={activeAuth} setActiveAuth={setActiveAuth}/>
         <Login activeLogin={activeLogin} setActiveLogin={setActiveLogin}/>
         </>

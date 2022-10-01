@@ -105,8 +105,8 @@ const Auth = ({ activeAuth, setActiveAuth }) => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className={styles.formText}>
-            <h1>Создать аккаунт</h1>
-            <p> Впишите свои данные, чтобы участвовать в аукционах.</p>
+            <h1>Create my account</h1>
+            <p> Enter your details to get started. </p>
           </div>
 
           <input
@@ -158,10 +158,10 @@ const Auth = ({ activeAuth, setActiveAuth }) => {
             }
             className={styles.btn}
           >
-            Создать мой аккаунт
+            Submit
           </button>
 
-          <a href="/">У вас уже есть аккаунт?</a>
+          <a href="/">You already have an account?</a>
         </form>
       </div>
     </>

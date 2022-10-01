@@ -50,8 +50,8 @@ const Login = ({ activeLogin, setActiveLogin }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className={styles.formText}>
-          <h1>Войти</h1>
-          <p> Добро пожаловать, войдите в аккаунт если он у вас уже есть.</p>
+          <h1>Sign in</h1>
+          <p> If you have already created an account, please sign in below. </p>
         </div>
         <input
           value={email}
@@ -80,10 +80,10 @@ const Login = ({ activeLogin, setActiveLogin }) => {
           }
           className={styles.btn}
         >
-          Войти
+          Sign in
         </button>
 
-        <a href="/">Забыли пароль?</a>
+        <a href="/">Forgot password?</a>
       </form>
     </div>
   );
