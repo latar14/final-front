@@ -1,0 +1,49 @@
+.container{
+    background-image: url("https://lyonturnbull.blob.core.windows.net/blogs/buy-selling-background.jpg");
+    height: 800px;
+    width: 100%;
+    background-position: 1%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 800px;
+    color: white;
+    text-align: center;
+}
+.caption{
+    padding-top: 80px;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    width: 75%;
+    margin: auto;
+}
+
+.card{
+    background-color: white;
+    width: 350px;
+    margin-top: 120px;
+    padding: 60px 40px;
+    height: 400px;
+    text-align: center;
+    
+}
+
+.card a{
+    color: black;
+    font-size: 22px;
+}
+
+.card h2{
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 80px;
+}
+
+.card h3{
+    font-weight: 500;
+    margin-top: 40px;
+}
