@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 import EmailVerifyPage from "./pages/EmailVerifyPage/EmailVerifyPage";
 import MainPage from "./pages/MainPage/MainPage";
+
 
 function App() {
   
@@ -11,6 +13,7 @@ function App() {
         <Route path='/' element={<MainPage/>}/>
         <Route path='user/:id/verify/:token' element={<EmailVerifyPage/>}/>
       </Routes>
+      <Footer/>
     </>
   );
 }
