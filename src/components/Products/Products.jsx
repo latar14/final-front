@@ -9,7 +9,6 @@ import Basket from "./img/Basket.png";
 
 const Products = () => {
   const products = useSelector((state) => state.product.product);
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct());
@@ -19,6 +18,8 @@ const Products = () => {
   const searchCards = products.filter((card) => {
     return card.name.toLowerCase().includes(value.toLowerCase());
   });
+  console.log(products)
+
 
   return (
     <div className={styles.things}>

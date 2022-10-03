@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import EmailVerifyPage from "./pages/EmailVerifyPage/EmailVerifyPage";
 import MainPage from "./pages/MainPage/MainPage";
-
+import Products from "./components/Products/Products"
 
 function App() {
   
