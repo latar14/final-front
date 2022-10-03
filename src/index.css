@@ -3,6 +3,7 @@ body {
   font-family: 'Cormorant', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
 code {
@@ -13,5 +14,19 @@ code {
 
 .Toastify__progress-bar--info {
   background: #34568b!important;
+}
+
+.carousel-control-prev-icon::after {
+  content: "<" !important;
+  font-weight: 700;
+  font-family: "Font Awesome 6 Pro","Font Awesome 6 Free";
+  font-size: 1.7rem;
+}
+
+.carousel-control-next-icon::after {
+  content: ">" !important;
+  font-weight: 700;
+  font-family: "Font Awesome 6 Pro","Font Awesome 6 Free";
+  font-size: 1.7rem;
 }
 
