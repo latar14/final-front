@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import  styled from '../Header/Header.module.css'
+import  styled from '../Header/header.module.css'
 
 const Header: React.FC = () :any => {
     return (
