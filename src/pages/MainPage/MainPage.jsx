@@ -5,6 +5,7 @@ import io from 'socket.io-client';
 import Carousel from '../../components/Carousel/Carousel'
 import Main from '../../components/Main/Main';
 import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
 const socket = io.connect("http://localhost:3030");
 
 const MainPage = () => {
@@ -28,6 +29,7 @@ const MainPage = () => {
             <button onClick={() => setActiveLogin(true)}>Sign in</button>
             <Auth activeAuth={activeAuth} setActiveAuth={setActiveAuth} />
             <Login activeLogin={activeLogin} setActiveLogin={setActiveLogin} />
+            <Header/>
             <Carousel/>
             <Main/>
             <Footer/>
