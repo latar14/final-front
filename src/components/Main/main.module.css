@@ -14,6 +14,8 @@
     background-color: silver;
     color: white;
     text-align: center;
+    width: 90%;
+    margin: auto;
 }
 .caption{
     padding-top: 80px;
