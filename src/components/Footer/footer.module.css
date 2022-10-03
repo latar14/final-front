@@ -1,9 +1,8 @@
 .footerContainer {
     width: 100%;
-    position: absolute;
+
     background-color: whitesmoke;
-    bottom: 0;
-    left: 0;
+   
     padding-top: 1rem;
 }
 
@@ -22,6 +21,7 @@
 
 .firstFooter div {
     color: white;
+    padding: 10px;
 }
 
 .firstFooterContent {
@@ -30,12 +30,13 @@
 
 .firstFooterContentImages {
     line-height: 10px;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 .footerLogo{
     width: 30px;
     height: 30px;
+    padding-bottom: 5px;
     background: transparent!important;
 }
 
