@@ -7,7 +7,8 @@ import {
 
 export default function App() {
   return (
-    <MDBCarousel className="class" showIndicators showControls keyboard interval={5000}>
+    <div>
+          <MDBCarousel className="class" showIndicators showControls keyboard interval={5000}>
       <MDBCarouselItem
       
         className='w-100 d-block'
@@ -46,5 +47,7 @@ export default function App() {
         alt='...'
       />
     </MDBCarousel>
+    </div>
+
   );
 }

@@ -11,13 +11,13 @@ import { Link } from "react-router-dom";
 
 const Products = () => {
   const products = useSelector((state) => state.product.product);
-
   const category = useSelector((state) => state.category.category);
 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct());
     dispatch(fetchCategory())
+
   }, [dispatch]);
 
   const [value, setValue] = useState("");

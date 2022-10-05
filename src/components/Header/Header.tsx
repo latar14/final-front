@@ -4,7 +4,7 @@ import  styled from '../Header/header.module.css'
 
 const Header: React.FC = () :any => {
     return (
-        <>
+        <div className={styled.head}>
         <div>
             <div className={styled.navImg}><img className={styled.img} src='https://lyonturnbull.blob.core.windows.net/site-images/LT_Logo.png' alt="" /></div>
         </div>
@@ -59,7 +59,7 @@ const Header: React.FC = () :any => {
                 <div className={styled.search}></div>
             </div>
         </div>
-        </>
+        </div>
     );
 };
 
