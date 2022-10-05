@@ -3,15 +3,20 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { fetchProduct } from "../../features/productSlice";
+import { fetchCategory } from "../../features/categorySlice";
 import CardProduct from "./CardProduct";
 import styles from "./products.module.css";
 import Basket from "./img/Basket.png";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const products = useSelector((state) => state.product.product);
+  const category = useSelector((state) => state.category.category);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct());
+    dispatch(fetchCategory());
   }, [dispatch]);
 
   const [value, setValue] = useState("");
@@ -29,16 +34,20 @@ const Products = () => {
       <div className={styles.things_head}>
         <div className={styles.things_head_ul}>
           <ul>
-            <li>XVIII</li>
-            <li>XIX</li>
-            <li>XX</li>
-            <li>XXI</li>
+            {category.map((item) => {
+              console.log(item.name)
+              return (
+                <Link className={styles.lin} to={`/category/${item._id}`}>
+                  <li>{item.title}</li>
+                </Link>
+              );
+            })}
           </ul>
         </div>
-          <div className={styles.form}>
-            <input type="text" onChange={(e) => setValue(e.target.value)} />
-          </div>
-          <div className={styles.basket}>
+        <div className={styles.form}>
+          <input type="text" onChange={(e) => setValue(e.target.value)} />
+        </div>
+        <div className={styles.basket}>
           <div className={styles.basket_img}>
             <img src={Basket} alt="" />
           </div>
