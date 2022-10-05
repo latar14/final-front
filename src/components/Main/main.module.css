@@ -6,7 +6,6 @@
 .container{
     background-image: url("https://lyonturnbull.blob.core.windows.net/blogs/buy-selling-background.jpg");
     height: 800px;
-    width: 100%;
     background-position: 1%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,7 +13,7 @@
     background-color: silver;
     color: white;
     text-align: center;
-    width: 90%;
+    width: 94%;
     margin: auto;
 }
 .caption{
