@@ -16,7 +16,8 @@ const Products = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProduct());
-    dispatch(fetchCategory());
+    dispatch(fetchCategory())
+
   }, [dispatch]);
 
   const [value, setValue] = useState("");
