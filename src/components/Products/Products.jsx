@@ -23,6 +23,8 @@ const Products = () => {
   const searchCards = products.filter((card) => {
     return card.name.toLowerCase().includes(value.toLowerCase());
   });
+  console.log(products)
+
 
   return (
     <div className={styles.things}>

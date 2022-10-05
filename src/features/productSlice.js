@@ -17,6 +17,21 @@ export const fetchProduct = createAsyncThunk(
   }
 );
 
+export const patchProd = createAsyncThunk('patch/product', async ({ id, priceStart }, thunkAPI) => {
+  try {
+    const res = await fetch(`http://localhost:3030/Product/pat/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({ priceStart: priceStart })
+    });
+    return { id, priceStart };
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
+  }
+})
+
 const productSlice = createSlice({
   name: "product",
   initialState,
@@ -26,6 +41,14 @@ const productSlice = createSlice({
     builder
       .addCase(fetchProduct.fulfilled, (state, action) => {
         state.product = action.payload;
+      })
+      .addCase(patchProd.fulfilled, (state, action) => {
+        state.product.map((item) => {
+          if (item._id === action.payload.id) {
+            return item.priceStart = action.payload.priceStart;
+          }
+          return item;
+        })
       })
   },
 });

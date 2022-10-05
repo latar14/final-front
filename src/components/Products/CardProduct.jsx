@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./cardProduct.module.css";
 
 const CardProduct = ({ item }) => {
-console.log(new Date().toLocaleDateString())
+  console.log(new Date().toLocaleDateString())
   return (
     <div className={styles.thing_card}>
       <div className={styles.thing_card_img}>
         <img src={item.image} alt="" />
       </div>
-      {item.private === true ? 
-      <div className={styles.thing_card_time_private}>
-        <p>{new Date(item.timeNow).toLocaleTimeString()}</p>
-      </div>
-      :
-      <div className={styles.thing_card_time_noprivate}>
-        <p>{new Date(item.timeNow).toLocaleTimeString()}</p>
-      </div>
+      {item.private === true ?
+        <div className={styles.thing_card_time_private}>
+          <p>{new Date(item.timeNow).toLocaleTimeString()}</p>
+        </div>
+        :
+        <div className={styles.thing_card_time_noprivate}>
+          <p>{new Date(item.timeNow).toLocaleTimeString()}</p>
+        </div>
       }
 
       <div className={styles.thing_card_text}>
@@ -41,21 +42,21 @@ console.log(new Date().toLocaleDateString())
             {item.private === true ? (
               <button className={styles.thing_card_private}>Приватный аукцион</button>
             ) : (
-              <button className={styles.thing_card_noprivate}>Участвовать аукционе</button>
+              <Link to={`/oneAuction/${item._id}`}><button className={styles.thing_card_noprivate}>Участвовать в аукционе</button></Link>
             )}
           </div>
           {!item.private === true ? <div className={styles.thing_card_price}>
             <p>Цена без торга: <b>{item.priceFinal}</b> $</p>
           </div>
-          :
-          null}
+            :
+            null}
           {item.private === true ? <div className={styles.thing_card_rule_private}>
             <p>Функция быстрой покупки недоступна в этом режиме</p>
           </div>
-          :
-          <div className={styles.thing_card_btn2}>
-            <button>Оформить покупку сейчас</button>
-          </div>
+            :
+            <div className={styles.thing_card_btn2}>
+              <button>Оформить покупку сейчас</button>
+            </div>
           }
         </div>
       </div>
