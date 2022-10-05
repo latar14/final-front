@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 
 const Products = () => {
   const products = useSelector((state) => state.product.product);
+
   const category = useSelector((state) => state.category.category);
 
   const dispatch = useDispatch();
@@ -23,6 +24,8 @@ const Products = () => {
   const searchCards = products.filter((card) => {
     return card.name.toLowerCase().includes(value.toLowerCase());
   });
+  console.log(products)
+
 
   return (
     <div className={styles.things}>
