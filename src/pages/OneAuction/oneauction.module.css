@@ -1,0 +1,29 @@
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.oneMain {
+    width: 90%;
+    height: 330px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.oneImg,
+.oneDes,
+.onePrice,
+.oneName {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oneImg img {
+    object-fit: cover;
+    width: 100%;
+}

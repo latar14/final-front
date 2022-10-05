@@ -5,12 +5,12 @@ import { fetchProduct } from "../../features/productSlice";
 const Main = () => {
     const products = useSelector((state) => state.product.product);
     const dispatch = useDispatch();
+    
     useEffect(() => {
       dispatch(fetchProduct());
     }, [dispatch]);
   
   return (
-     
      <div>
         <div className={styles.first_text}>Последние аукционы</div>
          <div className={styles.container_product} >
