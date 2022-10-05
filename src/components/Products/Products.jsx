@@ -33,7 +33,7 @@ const Products = () => {
         <div className={styles.things_head_ul}>
           <ul>
             {category.map((item) => {
-              console.log(item.name);
+              console.log(item.name)
               return (
                 <Link className={styles.lin} to={`/category/${item._id}`}>
                   <li>{item.title}</li>
