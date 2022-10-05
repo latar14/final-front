@@ -26,7 +26,7 @@ console.log(new Date().toLocaleDateString())
           <p>{item.description}</p>
         </div>
         <div className={styles.thing_card_date}>
-          <p>Опубликовано в {new Date(item.timeNow).toLocaleTimeString()}</p>
+          <p>Опубликовано {`${new Date(item.timeNow).toLocaleDateString()} в ${new Date(item.timeNow).toLocaleTimeString()}`}</p>
         </div>
       </div>
 
