@@ -6,10 +6,16 @@
     justify-content: center;
 }
 
+.oneDis {
+    display: flex;
+    justify-content: center;
+}
+
 .oneMain {
     width: 90%;
-    height: 330px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
 }
 
@@ -21,6 +27,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.oneDes {
+    padding: 10px 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .oneImg img {
