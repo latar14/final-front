@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Timer from "../Timer/Timer";
+import Timer from "../../components/Timer/Timer";
+
 import styles from "./cardProduct.module.css";
+
 
 const CardProduct = ({ item, expiryTimestamp }) => {
 

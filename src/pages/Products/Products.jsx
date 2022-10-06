@@ -36,10 +36,10 @@ const Products = () => {
       <div className={styles.things_head}>
         <div className={styles.things_head_ul}>
           <ul>
-            {category.map((item) => {
+            {category.map((item, index) => {
               return (
-                <Link className={styles.lin} to={`/category/${item._id}`}>
-                  <li>{item.title}</li>
+                <Link className={styles.lin} to={`/category/${item._id}`} key={index}>
+                  <li>{item.century}</li>
                 </Link>
               );
             })}

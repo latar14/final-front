@@ -1,9 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import EmailVerifyPage from "./pages/EmailVerifyPage/EmailVerifyPage";
 import MainPage from "./pages/MainPage/MainPage";
-import Products from "./components/Products/Products"
+
 import OneAuction from "./pages/OneAuction/OneAuction";
-import ProductId from "./components/Products/ProductId"
+import ProductId from "./pages/Products/ProductId";
+import Products from "./pages/Products/Products";
+
+
 function App() {
 
 
