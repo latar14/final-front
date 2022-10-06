@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Timer from "../Timer/Timer";
 import styles from "./cardProduct.module.css";
 
-const CardProduct = ({ item }) => {
-  console.log(new Date().toLocaleDateString())
+const CardProduct = ({ item, expiryTimestamp }) => {
+
   return (
     <div className={styles.thing_card}>
       <div className={styles.thing_card_img}>
@@ -11,11 +12,11 @@ const CardProduct = ({ item }) => {
       </div>
       {item.private === true ?
         <div className={styles.thing_card_time_private}>
-          <p>{new Date(item.timeNow).toLocaleTimeString()}</p>
+          <Timer expiryTimestamp={expiryTimestamp}/>
         </div>
         :
         <div className={styles.thing_card_time_noprivate}>
-          <p>{new Date(item.timeNow).toLocaleTimeString()}</p>
+          <Timer expiryTimestamp={expiryTimestamp}/>
         </div>
       }
 

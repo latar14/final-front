@@ -10,6 +10,7 @@ import Basket from "./img/Basket.png";
 import { Link } from "react-router-dom";
 
 const Products = () => {
+  
   const products = useSelector((state) => state.product.product);
   const category = useSelector((state) => state.category.category);
 
@@ -24,7 +25,7 @@ const Products = () => {
   const searchCards = products.filter((card) => {
     return card.name.toLowerCase().includes(value.toLowerCase());
   });
-  console.log(products)
+
 
 
   return (
@@ -36,7 +37,6 @@ const Products = () => {
         <div className={styles.things_head_ul}>
           <ul>
             {category.map((item) => {
-              console.log(item.name)
               return (
                 <Link className={styles.lin} to={`/category/${item._id}`}>
                   <li>{item.title}</li>
@@ -58,7 +58,9 @@ const Products = () => {
       <div className={styles.things_list}>
         <div className={styles.things_list_things}>
           {searchCards.map((item, index) => {
-            return <CardProduct item={item} key={index} />;
+              const time = new Date();
+              time.setMinutes(time.getMinutes() + item.timer)
+            return <CardProduct item={item} key={index} expiryTimestamp={time} />;
           })}
         </div>
       </div>
