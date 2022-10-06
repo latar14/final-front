@@ -28,9 +28,11 @@ const OneAuction = () => {
             {products.map((product) => {
                 if (id === product._id) {
                     return <div className={style.oneMain} key={product._id}>
-                        <div className={style.oneImg}><img alt='asdada' src={`${product.image}`} /></div>
                         <div className={style.oneName}>{product.name}</div>
-                        <div className={style.oneDes}>{product.description}</div>
+                        <div className={style.oneDis}>
+                            <div className={style.oneImg}><img alt='asdada' src={`${product.image}`} /></div>
+                            <div className={style.oneDes}>{product.description}</div>
+                        </div>
                         <div className={style.onePrice}>{product.priceStart}</div>
                     </div>
                 }
