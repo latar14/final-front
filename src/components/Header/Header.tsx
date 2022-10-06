@@ -1,9 +1,16 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Auth from '../Auth/Auth';
 import  styled from '../Header/header.module.css'
+import Login from '../Login/Login';
 
 const Header: React.FC = () :any => {
+
+    const [activeAuth, setActiveAuth] = useState(false);
+    const [activeLogin, setActiveLogin] = useState(false);
+
     return (
+        <>
         <div className={styled.head}>
         <div>
             <div className={styled.navImg}><img className={styled.img} src='https://lyonturnbull.blob.core.windows.net/site-images/LT_Logo.png' alt="" /></div>
@@ -51,7 +58,8 @@ const Header: React.FC = () :any => {
             <ul className={styled.dropMenu}>
                 SIGN IN/REGISTER
                 <div className={styled.dropContent}>
-                <Link to={'/'}>Sign In/Register</Link>
+                <div onClick={() => {setActiveLogin(true)}} > Sign In</div>
+                <div onClick={() => {setActiveAuth(true)}} > Register</div>
                 </div>
             </ul>
             <div className={styled.container}>
@@ -60,6 +68,10 @@ const Header: React.FC = () :any => {
             </div>
         </div>
         </div>
+
+     <Auth activeAuth={activeAuth} setActiveAuth={setActiveAuth} />
+    <Login activeLogin={activeLogin} setActiveLogin={setActiveLogin} />
+        </>
     );
 };
 

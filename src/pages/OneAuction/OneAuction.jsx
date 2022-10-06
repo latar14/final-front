@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import { fetchProduct, patchProd } from '../../features/productSlice';
 import style from './oneauction.module.css';
 import io from 'socket.io-client';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 const socket = io.connect("http://localhost:3030");
 
 const OneAuction = () => {
@@ -24,6 +26,7 @@ const OneAuction = () => {
     }, [dispatch]);
 
     return (<>
+    <Header/>
         <div className={style.main}>
             {products.map((product) => {
                 if (id === product._id) {
@@ -43,6 +46,7 @@ const OneAuction = () => {
                 <button onClick={() => { handle(id, priceStart) }}>x</button>
             </div>
         </div>
+        <Footer/>
     </>
     );
 };
