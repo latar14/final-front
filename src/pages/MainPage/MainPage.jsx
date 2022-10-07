@@ -16,10 +16,10 @@ const MainPage = () => {
             <button onClick={() => setActiveLogin(true)}>Sign in</button>
             <Auth activeAuth={activeAuth} setActiveAuth={setActiveAuth} />
             <Login activeLogin={activeLogin} setActiveLogin={setActiveLogin} />
-            <Header/>
-            <Carousel/>
-            <Main/>
-            <Footer/>
+            <Header />
+            <Carousel />
+            <Main />
+            <Footer />
         </>
     );
 };
