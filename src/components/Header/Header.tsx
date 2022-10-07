@@ -8,7 +8,6 @@ const Header: React.FC = () :any => {
 
     const [activeAuth, setActiveAuth] = useState(false);
     const [activeLogin, setActiveLogin] = useState(false);
-
     return (
         <>
         <div className={styled.head}>
@@ -61,10 +60,6 @@ const Header: React.FC = () :any => {
                 <div onClick={() => {setActiveLogin(true)}} > Sign In</div>
                 <div onClick={() => {setActiveAuth(true)}} > Register</div>
                 </div>
-            </ul>
-            <div className={styled.container}>
-                <input type="text" placeholder='Search' />
-                <div className={styled.search}></div>
             </div>
         </div>
         </div>
