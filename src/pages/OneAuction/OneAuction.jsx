@@ -26,7 +26,7 @@ const OneAuction = () => {
     }, [dispatch]);
 
     return (<>
-        <Header />
+    <Header/>
         <div className={style.main}>
             {products.map((product) => {
                 if (id === product._id) {
@@ -49,7 +49,7 @@ const OneAuction = () => {
                 <button onClick={() => { handle(id, priceStart) }}>x</button>
             </div>
         </div>
-        <Footer />
+        <Footer/>
     </>
     );
 };

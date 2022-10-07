@@ -59,6 +59,20 @@
   cursor: pointer;
 }
 
+.dropContent div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropContent div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
 .dropMenu:hover .dropContent {
   display: block;
   cursor: pointer;

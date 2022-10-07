@@ -8,6 +8,8 @@ import CardProduct from "./CardProduct";
 import styles from "./products.module.css";
 import Basket from "./img/Basket.png";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 
 const Products = () => {
   
@@ -29,6 +31,8 @@ const Products = () => {
 
 
   return (
+    <>
+    <Header/>
     <div className={styles.things}>
       <div className={styles.things_firstText}>
         <p>Все предстоящие аукционы</p>
@@ -65,6 +69,8 @@ const Products = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
