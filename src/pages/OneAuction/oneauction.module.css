@@ -22,7 +22,9 @@
 .oneImg,
 .oneDes,
 .onePrice,
-.oneName {
+.oneName,
+.oneWin {
+    margin-top: 5px;
     width: 30%;
     display: flex;
     justify-content: center;
@@ -38,4 +40,8 @@
 .oneImg img {
     object-fit: cover;
     width: 100%;
+}
+
+.inputer {
+    margin-top: 20px;
 }
