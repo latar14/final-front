@@ -35,7 +35,7 @@ const Products = () => {
     <Header/>
     <div className={styles.things}>
       <div className={styles.things_firstText}>
-        <p>Все предстоящие аукционы</p>
+        <p>Auctions & Events</p>
       </div>
       <div className={styles.things_head}>
         <div className={styles.things_head_ul}>

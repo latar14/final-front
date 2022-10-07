@@ -60,7 +60,7 @@ const Header: React.FC = () :any => {
                 <div onClick={() => {setActiveLogin(true)}} > Sign In</div>
                 <div onClick={() => {setActiveAuth(true)}} > Register</div>
                 </div>
-            </div>
+            </ul>
         </div>
         </div>
 

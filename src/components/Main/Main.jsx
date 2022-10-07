@@ -17,7 +17,7 @@ const Main = () => {
        {products.map((item, index) => { 
         if (index < 4){
             return (
-                <div className={styles.thing_card}>
+                <div className={styles.thing_card} key={item._id}>
                 <div className={styles.thing_card_img}>
                   <img  src={item.image} alt="" />
                 </div>

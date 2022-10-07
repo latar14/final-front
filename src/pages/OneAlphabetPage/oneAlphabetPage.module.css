@@ -1,0 +1,8 @@
+.container {
+    background-color: red;
+    width: 94%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
