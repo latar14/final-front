@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Auth from '../../components/Auth/Auth';
 import Login from '../../components/Login/Login';
-import Carousel from '../../components/Carousel/Carousel'
+import Carousel from '../../components/Carousel/Swiper'
 import Main from '../../components/Main/Main';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';

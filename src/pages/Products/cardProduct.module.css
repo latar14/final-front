@@ -51,13 +51,16 @@
 
 .thing_card_description {
     font-size: 19px;
+
     padding: 15px 40px;
 }
 
 .thing_card_date {
-    font-size: 17px;
+    font-size: 20px;
+    font-family: 'Cormorant', serif;
     font-style: italic;
-    padding: 15px 40px;
+    margin-left: 35px;
+    /* padding: 15px 40px; */
 }
 
 .thing_card_allbuttons {

@@ -98,3 +98,22 @@
     font-size: 22px;
 
 }
+
+
+.thing_card_btn1 button {
+    border: none;
+    border-radius: 1px;
+    padding: 5px;
+}
+
+.thing_card_btn1 button:hover {
+   background-color: #6b6f6d;
+
+}
+
+.thing_card_private {
+    background-color: goldenrod;
+}
+.thing_card_private:hover {
+    background-color: rgb(229, 174, 34)!important;
+}

@@ -5,47 +5,58 @@
   ::-webkit-scrollbar { width: 0; }
   
   .things_firstText {
-    width: 80%;
     margin: auto;
     padding: 15px 0;
   }
 
   .things_firstText p {
-    width: 37%;
-    margin: auto;
-    font-size: 40px;
+    font-family: 'Cormorant', serif;
+    text-align: center;
+    font-size: 50px;
+    color: black;
     cursor: pointer;
+    padding: 0px!important;
+    margin: 0px!important;
   }
 
   .things_head {
-    background-color: rgba(192, 192, 192, 0.50);
+    background-color: rgba(241, 239, 239, 0.9);
     width: 80%;
+    height: 5rem;
     margin: auto;
     margin-top: 20px;
-    border: 2px solid;
+    border: 1.2px solid;
+    border-radius: 2px;
     display: flex;
   }
 
   .things_head_ul {
     width: 50%;
+    margin: 0 auto;
   }
 
   .things_head_ul ul {
-    width: 83%;
     display: flex;
+    align-items: center;
     justify-content: space-around;
     list-style: none;
-    font-size: 18px;
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 22px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .things_head_ul ul li {
     cursor: pointer;
     font-weight: bold;
+    color: brown;
   }
 
   .form {
-    margin-top: 13px;
-    height: 60%;
+    margin: auto;
+    height: 50%;
     border-left: 2px solid;
     padding: 0 50px;
     width: 20%;
@@ -53,9 +64,12 @@
   
   .form input {
     padding: 0 20px;
-    height: 25px;
-    width: 80%;
-    border: 2px solid;
+    height: 100%;
+    width: 210px;
+    border: none;
+    border-radius: 2px;
+    outline: 1.5px solid brown;
+    
   }
 
   .basket {
