@@ -6,6 +6,7 @@ import styles from "./login.module.css";
 
 const Login = ({ activeLogin, setActiveLogin }) => {
 
+  
   const dispatch = useDispatch()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,6 +38,7 @@ const Login = ({ activeLogin, setActiveLogin }) => {
       dispatch(signInThunk({email, password}))
       setEmail("")
       setPassword("")
+      setActiveLogin(false)
     }
   };
 

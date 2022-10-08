@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import Auth from '../../components/Auth/Auth';
-import Login from '../../components/Login/Login';
+import React from 'react';
 import Carousel from '../../components/Carousel/Swiper'
 import Main from '../../components/Main/Main';
 import Footer from '../../components/Footer/Footer';

@@ -1,11 +1,10 @@
-import styles from "./carousel.module.css";
 import React from 'react';
 import {
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
 
-export default function App() {
+export default function Carousel() {
   return (
     <div>
           <MDBCarousel className="class" showIndicators showControls keyboard interval={5000}>

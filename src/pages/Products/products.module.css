@@ -6,7 +6,7 @@
   
   .things_firstText {
     margin: auto;
-    padding: 15px 0;
+    padding: 15px 0 0 0;
   }
 
   .things_firstText p {
@@ -24,7 +24,6 @@
     width: 80%;
     height: 5rem;
     margin: auto;
-    margin-top: 20px;
     border: 1.2px solid;
     border-radius: 2px;
     display: flex;
@@ -33,6 +32,17 @@
   .things_head_ul {
     width: 50%;
     margin: 0 auto;
+  }
+
+  .things_head_ul ul li:hover {
+    text-decoration: 3px underline #daa520;
+  }
+
+  .loader_content {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .things_head_ul ul {
@@ -68,7 +78,7 @@
     width: 210px;
     border: none;
     border-radius: 2px;
-    outline: 1.5px solid brown;
+    outline: 1.5px solid #a52a2a;
     
   }
 

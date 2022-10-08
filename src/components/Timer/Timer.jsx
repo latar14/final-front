@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTimer } from "react-timer-hook";
 
-function Timer({ expiryTimestamp }) {
+const Timer = React.memo(({ expiryTimestamp }) => {
   const [dateNow, setDateNow] = useState(new Date().toLocaleString());
 
   const {
@@ -9,11 +9,7 @@ function Timer({ expiryTimestamp }) {
     minutes,
     hours,
     days,
-    isRunning,
     start,
-    pause,
-    resume,
-    restart,
   } = useTimer({
     expiryTimestamp,
     onExpire: () => {
@@ -43,7 +39,7 @@ function Timer({ expiryTimestamp }) {
       </div>
     </div>
   );
-}
+})
 
 export default Timer;
 

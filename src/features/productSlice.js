@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
   product: [],
+  loading: false,
 };
 
 export const fetchProduct = createAsyncThunk(
@@ -19,7 +20,7 @@ export const fetchProduct = createAsyncThunk(
 
 export const patchProd = createAsyncThunk('patch/product', async ({ id, priceStart }, thunkAPI) => {
   try {
-    const res = await fetch(`http://localhost:3030/Product/pat/${id}`, {
+      await fetch(`http://localhost:3030/Product/pat/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-type': 'application/json'
@@ -40,7 +41,11 @@ const productSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchProduct.fulfilled, (state, action) => {
+        state.loading = false
         state.product = action.payload;
+      })
+      .addCase(fetchProduct.pending, (state, action) => {
+        state.loading = true
       })
       .addCase(patchProd.fulfilled, (state, action) => {
         state.product.map((item) => {
