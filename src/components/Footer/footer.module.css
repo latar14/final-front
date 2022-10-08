@@ -1,7 +1,7 @@
 .footerContainer {
     width: 100%;
-    background-color: whitesmoke;
-    padding-top: 1rem;
+    background-color: rgb(238, 238, 238);
+    padding-top: 2rem;
 }
 
 .firstFooter {
@@ -15,9 +15,18 @@
     border-radius: 2px;
 }
 
-.firstFooter div {
+.firstFooter {
     color: white;
-    padding: 10px;
+    padding: 25px 10px 15px 10px;
+}
+
+.firstFooter label{
+    font-size: 18px;
+    font-family: 'Cormorant', serif;
+    font-weight: 600;
+    border-bottom: 1px solid goldenrod;
+    height: 1rem;
+    margin-bottom: 15px;
 }
 
 .firstFooterContent {
@@ -26,7 +35,10 @@
 
 .firstFooterContentImages {
     line-height: 10px;
-    margin-top: 10px;
+}
+.firstFooterContentImages label{
+    font-family: 'Cormorant', serif;
+    margin-bottom: 15px;
 }
 
 .footerLogo{
@@ -47,10 +59,18 @@
     align-items: center;
 }
 
-
 .secondFooter ul {
     display: flex;
     gap: 20px;
     list-style-type: none;
 }
+
+.secondFooter h3 {
+    font-family: 'Cormorant', serif;
+    font-weight: 800;
+    background: -webkit-linear-gradient(right, brown , goldenrod);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 

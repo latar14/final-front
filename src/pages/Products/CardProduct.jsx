@@ -5,7 +5,7 @@ import Timer from "../../components/Timer/Timer";
 import styles from "./cardProduct.module.css";
 
 
-const CardProduct = ({ item, expiryTimestamp }) => {
+const CardProduct = React.memo(({ item, expiryTimestamp }) => {
 
   return (
     <div className={styles.thing_card}>
@@ -27,14 +27,12 @@ const CardProduct = ({ item, expiryTimestamp }) => {
           <p>{item.name}</p>
         </div>
         <div className={styles.thing_card_description}>
-          <p>{item.description}</p>
+          <p>{item.description.substr(0, 80) + "..."}</p>
         </div>
         <div className={styles.thing_card_date}>
           <p>Опубликовано {`${new Date(item.timeNow).toLocaleDateString()} в ${new Date(item.timeNow).toLocaleTimeString()}`}</p>
         </div>
       </div>
-
-      {/* <div className={styles.thing_card_price}>До оканчания аукциона осталось {item.timer} мин.</div> */}
 
       <div className={styles.thing_card_allbuttons}>
         <div className={styles.thing_card_buttons}>
@@ -65,6 +63,6 @@ const CardProduct = ({ item, expiryTimestamp }) => {
       </div>
     </div>
   );
-};
+});
 
 export default CardProduct;

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import styles from "./footer.module.css";
 import telegramLogo from '../../images/telegram-icon.png'
 import instagramLogo from '../../images/instagram-icon.png'
 
-const Footer = () => {
+const Footer = memo(() => {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.firstFooter}>
@@ -59,6 +59,6 @@ const Footer = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Footer;

@@ -20,17 +20,17 @@
 
 .thing_card_time_noprivate {
     position: absolute;
-    margin: 320px 0 0 120px;
+    margin: 320px 0 0 106px;
     background-color: brown;
-    padding: 0px 80px;
+    padding: 8px 80px;
     /* border: 2px solid; */
 }
 
 .thing_card_time_private {
     position: absolute;
-    margin: 320px 0 0 120px;
+    margin: 320px 0 0 106px;
     background-color: goldenrod;
-    padding: 0px 80px;
+    padding: 8px 80px;
     /* border: 2px solid; */
 }
 
@@ -41,17 +41,21 @@
 }
 
 .thing_card_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 30%;
 }
 
 .thing_card_name {
-    font-size: 28px;
+    font-size: 25px;
     padding: 15px 40px;
 }
 
+
 .thing_card_description {
     font-size: 19px;
-
+    font-family: 'Cormorant', serif;
     padding: 15px 40px;
 }
 
@@ -76,11 +80,19 @@
 
 .thing_card_price {
     font-size: 20px;
+    width: 70%;
+    margin: auto;
     text-align: center;
+}
+.thing_card_price p{
+   margin-bottom: 0.5rem;
+   border-bottom: 3px solid;
+   border-image-slice: 1;
+   border-image-source: linear-gradient(to left, goldenrod, brown)
 }
 
 .thing_card_price b {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .thing_card_btn1 {
@@ -88,12 +100,13 @@
 }
 
 .thing_card_btn1 button{
-    width: 65%;
-    margin-left: 70px;
+    width: 70%;
+    margin-left: 50px;
     padding: 10px;
-    /* background-color: gray; */
+    margin-bottom: 10px;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
+    font-family:  'Cormorant', serif;
     border: none;
     cursor: pointer;
 }
@@ -104,20 +117,23 @@
 }
 
 .thing_card_rule_private p {
+
     width: 50%;
     text-align: center;
+    margin-top: 20px;
     margin-left: 100px;
     color: brown;
     font-weight: bold;
 }
 
 .thing_card_btn2 button{
-    width: 65%;
-    margin-left: 70px;
+    width: 70%;
+    margin-left: 50px;
     padding: 10px;
     background-color: brown;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
+    font-family:  'Cormorant', serif;
     border: none;
     cursor: pointer;
 }
