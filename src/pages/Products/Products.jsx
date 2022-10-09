@@ -93,10 +93,9 @@ const Products = React.memo(() => {
           <div className={styles.things_list}>
             <div className={styles.things_list_things}>
               {searchCards.map((item, index) => {
-                const time = new Date();
-                time.setMinutes(time.getMinutes() + item.timer);
+                
                 return (
-                  <CardProduct item={item} key={index} expiryTimestamp={time} />
+                  <CardProduct item={item} key={index} timer={item.timer}/>
                 );
               })}
             </div>
