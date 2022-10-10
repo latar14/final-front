@@ -1,0 +1,73 @@
+.iconsMain {
+    width: 10%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.allicons {
+    position: relative;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    right: 80px;
+}
+.iconsText {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40%;
+    margin-top: 105px;
+    right: 80px;
+}
+.oneIcon {
+    width: 70px;
+    cursor: pointer;
+    margin-top: 5px;
+    size: 50px;
+    margin-block-start: 30px;
+}
+.oneIcon :hover {
+    color: red;
+    background-color: red;
+    transition: 7ms;
+    box-shadow: red;
+
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    color: black;
+    padding: 10px 10px;
+}
+.infoBids {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.mainInfoB {
+width: 90%;
+padding: 0 10px;
+}
+.textMyAuc {
+    text-align: center;
+}
+.userBlock img {
+width: 50%;
+border-radius: 50%;
+display: flex;
+}
+.userBlock {
+    margin-top: 10px;
+    width: 130px;
+}
+.infoBids {
+    list-style: none;
+    opacity: 0.3;
+}
+.oneLink {
+    margin-top: 21px;
+
+}
