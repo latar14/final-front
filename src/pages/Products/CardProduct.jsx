@@ -16,10 +16,10 @@ const CardProduct = React.memo(({ item}) => {
 
   const handleAuctionAccess = (id) => {
     // dateNow !== "08.10.2022" && dateNow.substring(12, 17).split(':').join("") < auctionStart.split(":").join("")
-    if (timerStart === false) {
-      setDateError(true)
-      return
-    }
+    // if (timerStart === false) {
+    //   setDateError(true)
+    //   return
+    // }
       navigate(`/oneAuction/${id}`)
       setDateError(false)
   }
@@ -77,7 +77,9 @@ const CardProduct = React.memo(({ item}) => {
               <button>Оформить покупку сейчас</button>
             </div>
           } 
+
           {dateError ? <div>Аукцион начнется {item.auctionStart.split(',')[0]} в {item.auctionStart.split(',')[1].substr(0,3)}:{item.auctionStart.split(',')[1].substr(3,5)}</div> : null}
+
         </div>
       </div>
     </div>
