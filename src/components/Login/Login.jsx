@@ -65,6 +65,7 @@ const Login = ({ activeLogin, setActiveLogin }) => {
         />
         <input
           value={password}
+          type="password"
           onChange={(e) => {
             setPassword(e.target.value);
           }}
