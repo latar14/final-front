@@ -93,13 +93,18 @@
     margin: auto;
     text-align: center;
 }
+
 .thing_card_price p{
    margin-bottom: 0.5rem;
+   font-size: 20px;
+   font-family: 'Cormorant', serif;
    border-bottom: 3px solid;
    border-image-slice: 1;
    border-image-source: linear-gradient(to left, goldenrod, brown)
 }
-
+.membersField {
+    text-align: center;
+}
 .thing_card_price b {
     font-size: 20px;
 }
