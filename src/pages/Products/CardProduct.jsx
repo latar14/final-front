@@ -1,27 +1,34 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Timer from "../../components/Timer/Timer";
 
 import styles from "./cardProduct.module.css";
 
 
-const CardProduct = React.memo(({ item}) => {
+const CardProduct = React.memo(({ item }) => {
 
   const navigate = useNavigate()
+  const token = useSelector(state => state.application.token)
 
   const [dateNow, setDateNow] = useState(new Date().toLocaleString());
   const [timerStart, setTimerStart] = useState(false)
   const [dateError, setDateError] = useState(false)
-
+  const [tokenError, setTokenError] = useState(false)
 
   const handleAuctionAccess = (id) => {
-    // dateNow !== "08.10.2022" && dateNow.substring(12, 17).split(':').join("") < auctionStart.split(":").join("")
-    // if (timerStart === false) {
-    //   setDateError(true)
-    //   return
-    // }
+    if(!token) {
+      setTokenError(true)
+      return
+    }
+    if (timerStart === false) {
+      setDateError(true)
+      return
+    }
       navigate(`/oneAuction/${id}`)
       setDateError(false)
+      setTokenError(false)
+
   }
   
   return (
@@ -78,8 +85,8 @@ const CardProduct = React.memo(({ item}) => {
             </div>
           } 
 
-          {dateError ? <div>Аукцион начнется {item.auctionStart.split(',')[0]} в {item.auctionStart.split(',')[1].substr(0,3)}:{item.auctionStart.split(',')[1].substr(3,5)}</div> : null}
-
+          {dateError ? <div className={styles.errorText}>Аукцион начнется {item.auctionStart.split(',')[0]} в {item.auctionStart.split(',')[1].substr(0,3)}:{item.auctionStart.split(',')[1].substr(3,5)}</div> : null}
+          {tokenError ? <div className={styles.errorText}>Не авторизованный пользователь не может участвовать в аукционе</div> : null}
         </div>
       </div>
     </div>

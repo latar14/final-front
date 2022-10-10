@@ -47,6 +47,11 @@
     width: 30%;
 }
 
+.errorText {
+    color:brown;
+    text-align: center;
+}
+
 
 .thing_card_text p {
     margin: 0;
