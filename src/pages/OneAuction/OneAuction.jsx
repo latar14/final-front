@@ -45,14 +45,14 @@ const OneAuction = () => {
                             <div className={style.oneDes}>{product.description}</div>
                         </div>
                         <div className={style.onePrice}><h4>Ставка: {product.priceStart}$</h4></div>
-                        <div className={style.oneWin}>Последнюю ставку сделал: {product.bet.firstName}</div>
+                        <div className={style.oneWin}>{product.bet === null ? 'Нет ни одной ставки' : `Последнюю ставку сделал: ${product.bet.firstName}`}</div>
                     </div>
                 }
                 return null;
             })}
             <div className={style.inputer}>
                 <input type='number' placeholder='Введите сумму' value={priceStart} onChange={(e) => setPriceStart(e.target.value)} />
-                <button onClick={() => { handle(id, priceStart, bet) }}>x</button>
+                <button onClick={() => { handle(id, priceStart, bet) }}>Сделать ставку</button>
             </div>
         </div>
         <Footer />
