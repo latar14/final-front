@@ -86,3 +86,6 @@ display: flex;
     width: 250px;
     text-align: left;
 }
+.lisImg img {
+    width: 70px;
+}

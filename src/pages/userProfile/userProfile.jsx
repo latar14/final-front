@@ -50,7 +50,7 @@ const UserProfile = ()  => {
             </div>
             <div className={styled.mainInfoB}>
             <ul className={styled.infoBids}>
-                        <li className={styled.lis}>№</li>
+                        <li className={styled.lis}>Product</li>
                         <li className={styled.lis}>Auctions</li>
                         <li className={styled.lis}>Time</li>
                         <li className={styled.lis}>Price</li>
@@ -60,9 +60,9 @@ const UserProfile = ()  => {
                 return (
                     <div>
                     <ul className={styled.infoBids2}>
-                        <li className={styled.lis}><img src={`http://localhost:3030/${item.image}`} alt="#" /></li>
+                        <li className={styled.lisImg}><img src={item.image} alt="#" /></li>
                         <li className={styled.lisName}>{item.name}</li>
-                        <li className={styled.lis2}>{item.timer}</li>
+                        <li className={styled.lis2}></li>
                         <li className={styled.lis2}>{item.priceFinal}$</li>
                     </ul>
                     <hr />
