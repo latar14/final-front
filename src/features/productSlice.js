@@ -20,7 +20,7 @@ export const fetchProduct = createAsyncThunk(
 
 export const patchProd = createAsyncThunk('patch/product', async ({ id, priceStart }, thunkAPI) => {
   try {
-      await fetch(`http://localhost:3030/Product/pat/${id}`, {
+    await fetch(`http://localhost:3030/Product/pat/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-type': 'application/json'
@@ -28,6 +28,23 @@ export const patchProd = createAsyncThunk('patch/product', async ({ id, priceSta
       body: JSON.stringify({ priceStart: priceStart })
     });
     return { id, priceStart };
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
+  }
+})
+
+export const patchUser = createAsyncThunk('patch/user', async ({ id, bet }, thunkAPI) => {
+  try {
+    const res = await fetch(`http://localhost:3030/Product/arr/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({ bet: bet })
+    });
+    const data = await res.json();
+    console.log(id, bet)
+    return { id, data }
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
   }
@@ -51,6 +68,14 @@ const productSlice = createSlice({
         state.product.map((item) => {
           if (item._id === action.payload.id) {
             return item.priceStart = action.payload.priceStart;
+          }
+          return item;
+        })
+      })
+      .addCase(patchUser.fulfilled, (state, action) => {
+        state.product.map((item) => {
+          if (item._id === action.payload.id) {
+            return item.bet = action.payload.data.bet;
           }
           return item;
         })
