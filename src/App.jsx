@@ -21,12 +21,9 @@ function App() {
         <Route path='/products' element={<Products/>} />
         <Route path='/products/category/:id' element={<Products/>} />
         <Route path="/oneAuction/:id" element={<OneAuction />} />
-        <Route path="/vremenno" element={<OneAlphabetPage />} />
-
         <Route path="/alphabet" element={<Alphabet />} />
-
+        <Route path="/alphabet/:id" element={<OneAlphabetPage />} />
         <Route path="/profile" element={<UserProfile />} />
-
       </Routes>
     </>
   );
