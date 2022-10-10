@@ -5,7 +5,7 @@ import Timer from "../../components/Timer/Timer";
 import styles from "./cardProduct.module.css";
 
 
-const CardProduct = React.memo(({ item, timer}) => {
+const CardProduct = React.memo(({ item}) => {
 
   const navigate = useNavigate()
 
@@ -31,11 +31,11 @@ const CardProduct = React.memo(({ item, timer}) => {
       </div>
       {item.private === true ?
         <div className={styles.thing_card_time_private}>
-          <Timer timer={timer} dateNow={dateNow} setDateNow={setDateNow} setTimerStart={setTimerStart}/>
+          <Timer item={item} dateNow={dateNow} setDateNow={setDateNow} setTimerStart={setTimerStart}/>
         </div>
         :
         <div className={styles.thing_card_time_noprivate}>
-          <Timer timer={timer} dateNow={dateNow} setDateNow={setDateNow} setTimerStart={setTimerStart}/>
+          <Timer item={item} dateNow={dateNow} setDateNow={setDateNow} setTimerStart={setTimerStart}/>
         </div>
       }
 
@@ -47,7 +47,8 @@ const CardProduct = React.memo(({ item, timer}) => {
           <p>{item.description.substr(0, 80) + "..."}</p>
         </div>
         <div className={styles.thing_card_date}>
-          <p>Опубликовано {`${new Date(item.timeNow).toLocaleDateString()} в ${new Date(item.timeNow).toLocaleTimeString()}`}</p>
+          <p>Начало аукциона: {item.auctionStart.split(',')[0]} в {item.auctionStart.split(',')[1].substr(0,3)}:{item.auctionStart.split(',')[1].substr(3,5)}</p>
+          <p>Опубликовано 10.10.2022</p>
         </div>
       </div>
 
@@ -76,7 +77,9 @@ const CardProduct = React.memo(({ item, timer}) => {
               <button>Оформить покупку сейчас</button>
             </div>
           } 
-          {/* {dateError ? <div>ЕЩЕ НЕ ВРЕМЯ</div> : null} */}
+
+          {dateError ? <div>Аукцион начнется {item.auctionStart.split(',')[0]} в {item.auctionStart.split(',')[1].substr(0,3)}:{item.auctionStart.split(',')[1].substr(3,5)}</div> : null}
+
         </div>
       </div>
     </div>

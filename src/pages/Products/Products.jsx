@@ -95,7 +95,7 @@ const Products = React.memo(() => {
               {searchCards.map((item, index) => {
                 
                 return (
-                  <CardProduct item={item} key={index} timer={item.timer}/>
+                  <CardProduct item={item} key={index}/>
                 );
               })}
             </div>

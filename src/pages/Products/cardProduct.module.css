@@ -47,6 +47,10 @@
     width: 30%;
 }
 
+
+.thing_card_text p {
+    margin: 0;
+}
 .thing_card_name {
     font-size: 25px;
     padding: 15px 40px;
