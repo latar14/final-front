@@ -38,7 +38,7 @@ const Header = React.memo(() => {
             <ul className={styled.dropMenu}>
                 DEPARTMENTS
                 <div className={styled.dropContent}>
-                <div>View all Departments</div>
+                <div onClick={() => {navigate('/alphabet')}}>View all Departments</div>
                 <div>Specialists Directory</div>
                 <div>Private Art Collections</div>
                 <div>Corporate Art Collection</div>
@@ -69,7 +69,7 @@ const Header = React.memo(() => {
                 <>
                 PERSONAL ACCOUNT
                 <div className={styled.dropContent}>
-                <div onClick={() => {console.log('Добавить сюда navigate(на личный кабинет)')}} >Personal Account</div>
+                <div onClick={() => {navigate('/profile')}} >Personal Account</div>
                 <div onClick={() => handleLogOut()} > Log Out</div>
                 </div>
                 </>
