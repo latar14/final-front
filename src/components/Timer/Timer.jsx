@@ -1,23 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useTimer } from "react-timer-hook";
+import { addProductForWinnerUser } from "../../features/productSlice";
 
-const Timer = React.memo(({ dateNow, setDateNow, setTimerStart, item }) => {
+const Timer = React.memo(({ dateNow, setDateNow, setTimerStart, item, setActiveWinner }) => {
 
+
+    const dispatch = useDispatch()
     const expiryTimestamp = new Date(item.auctionEnd); // конец аукциона
     expiryTimestamp.setMinutes(expiryTimestamp.getMinutes())
 
     const timeRightNow = Number(dateNow.substring(12, 17).split(":").join("")) // реальное время
     const auctionStart = item.auctionStart.split(',')[1] // начало аукциона
 
-    console.log(timeRightNow, 'реальное время')
-    console.log(auctionStart, 'начало аукциона')
+    // console.log(timeRightNow, 'реальное время')
+    // console.log(auctionStart, 'начало аукциона')
 
 
-    const { seconds, minutes, hours, days, start } = useTimer({
+    const { seconds, minutes, hours, days, start, isRunning } = useTimer({
       expiryTimestamp,
       onExpire: () => {
-        console.log("onExpire called");
-        
+        if(setActiveWinner) {
+          dispatch(addProductForWinnerUser({id: item.bet._id, productId: item._id}))
+          setActiveWinner(true)
+        }
       },
       autoStart: false,
     });
@@ -38,12 +44,11 @@ const Timer = React.memo(({ dateNow, setDateNow, setTimerStart, item }) => {
       
     }, []);
 
-    //    console.log(dateNow)
 
     return (
       <div style={{ textAlign: "center" }}>
         <div style={{ fontSize: "30px" }}>
-          <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+          {isRunning ?  <div><span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span></div> : <span>0:0:0:0</span>}
         </div>
       </div>
     );

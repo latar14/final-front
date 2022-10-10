@@ -33,6 +33,40 @@ export const patchProd = createAsyncThunk('patch/product', async ({ id, priceSta
   }
 })
 
+export const addUserLikeAuictionMember = createAsyncThunk('patch/addUserLikeMember', async ({id, userId}, thunkAPI) => {
+  try {
+    const res = await fetch(`http://localhost:3030/Product/members/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({userId})
+    });
+
+    const data = await res.json();
+    return { data }
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
+  }
+})
+
+export const addProductForWinnerUser = createAsyncThunk('patch/addProductForWinnerUser', async ({id, productId}, thunkAPI) => {
+    try {
+     const res = await fetch(`http://localhost:3030/user/buy/${id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify({productId})
+      })
+
+      const data = await res.json();
+      return { data }
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+})
+
 export const patchUser = createAsyncThunk('patch/user', async ({ id, bet }, thunkAPI) => {
   try {
     const res = await fetch(`http://localhost:3030/Product/arr/${id}`, {
@@ -43,7 +77,6 @@ export const patchUser = createAsyncThunk('patch/user', async ({ id, bet }, thun
       body: JSON.stringify({ bet: bet })
     });
     const data = await res.json();
-    console.log(id, bet)
     return { id, data }
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
