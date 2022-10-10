@@ -1,13 +1,13 @@
-import styles from "./carousel.module.css";
 import React from 'react';
 import {
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
 
-export default function App() {
+export default function Carousel() {
   return (
-    <MDBCarousel className="class" showIndicators showControls keyboard interval={5000}>
+    <div>
+          <MDBCarousel className="class" showIndicators showControls keyboard interval={5000}>
       <MDBCarouselItem
       
         className='w-100 d-block'
@@ -46,5 +46,7 @@ export default function App() {
         alt='...'
       />
     </MDBCarousel>
+    </div>
+
   );
 }

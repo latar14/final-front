@@ -1,0 +1,47 @@
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.oneDis {
+    display: flex;
+    justify-content: center;
+}
+
+.oneMain {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.oneImg,
+.oneDes,
+.onePrice,
+.oneName,
+.oneWin {
+    margin-top: 5px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oneDes {
+    padding: 10px 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.oneImg img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.inputer {
+    margin-top: 20px;
+}

@@ -62,6 +62,7 @@ const Auth = ({ activeAuth, setActiveAuth }) => {
                 backgroundColor: "transparent",
               }}
               src={icon}
+              alt='mail'
             />
           ),
           color: "red",

@@ -6,7 +6,6 @@
 .container{
     background-image: url("https://lyonturnbull.blob.core.windows.net/blogs/buy-selling-background.jpg");
     height: 800px;
-    width: 100%;
     background-position: 1%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,7 +13,7 @@
     background-color: silver;
     color: white;
     text-align: center;
-    width: 90%;
+    width: 94%;
     margin: auto;
 }
 .caption{
@@ -25,7 +24,7 @@
     align-items: center;
     justify-content: space-around;
     color: black;
-    width: 75%;
+    width: 90%;
     margin: auto;
 }
 
@@ -35,25 +34,33 @@
     margin-top: 120px;
     padding: 60px 40px;
     height: 400px;
-    text-align: center;
-    
-}
-
+    word-break: break-all;
+}   
 .card a{
     color: black;
     font-size: 22px;
+}
+.caption h1{
+    margin: auto;
+    width: 44%;
+    font-weight: 500;
+    border-bottom: 1px solid white;
+    font-family: 'Cormorant', serif;
 }
 
 .card h2{
     font-weight: 300;
     font-size: 24px;
+    font-family: 'Cormorant', serif;
     margin-bottom: 80px;
 }
 
 .card h3{
     font-weight: 500;
     margin-top: 40px;
+    font-family: 'Cormorant', serif;
 }
+
 
 .container_product{
     display: flex;
@@ -77,6 +84,9 @@
 
 .thing_card{
     width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .thing_card_img {
@@ -96,6 +106,35 @@
 }
 
 .thing_card_name{
-    font-size: 22px;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+    font-weight: 800;
 
+}
+
+.thing_card_description {
+    text-align: center;
+}
+.thing_card_price {
+    text-align: center;
+}
+
+
+.thing_card_btn1 button {
+    border: none;
+    border-radius: 1px;
+    padding: 5px;
+}
+
+.thing_card_btn1 button:hover {
+   background-color: #6b6f6d;
+
+}
+
+.thing_card_private {
+    background-color: goldenrod;
+}
+.thing_card_private:hover {
+    background-color: rgb(229, 174, 34)!important;
 }

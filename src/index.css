@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Cormorant', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,5 +30,9 @@ code {
   font-weight: 700;
   font-family: "Font Awesome 6 Pro","Font Awesome 6 Free";
   font-size: 1.7rem;
+}
+.class{
+  width: 94%;
+  margin: auto;
 }
 
