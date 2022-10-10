@@ -6,7 +6,7 @@ import Timer from "../../components/Timer/Timer";
 import styles from "./cardProduct.module.css";
 
 
-const CardProduct = React.memo(({ item}) => {
+const CardProduct = React.memo(({ item }) => {
 
   const navigate = useNavigate()
   const token = useSelector(state => state.application.token)

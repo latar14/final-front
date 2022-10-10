@@ -17,6 +17,7 @@ const Timer = React.memo(({ dateNow, setDateNow, setTimerStart, item }) => {
       expiryTimestamp,
       onExpire: () => {
         console.log("onExpire called");
+        
       },
       autoStart: false,
     });
