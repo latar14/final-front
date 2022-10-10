@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useTimer } from "react-timer-hook";
 
-const Timer = React.memo(({ dateNow, setDateNow, setTimerStart, timer }) => {
+const Timer = React.memo(({ dateNow, setDateNow, setTimerStart, item }) => {
 
-    const expiryTimestamp = new Date('Sat Oct 08 2022 22:40:28');
-    console.log(expiryTimestamp.getMinutes())
+    const expiryTimestamp = new Date(item.auctionEnd); // конец аукциона
     expiryTimestamp.setMinutes(expiryTimestamp.getMinutes())
 
-    const timeRightNow = Number(dateNow.substring(12, 17).split(":").join(""), '-3')
-    const auctionStart ='22:25'
-    const auctionStartNum = Number(auctionStart.split(":").join(""))
+    const timeRightNow = Number(dateNow.substring(12, 17).split(":").join("")) // реальное время
+    const auctionStart = item.auctionStart.split(',')[1] // начало аукциона
+
+    console.log(timeRightNow, 'реальное время')
+    console.log(auctionStart, 'начало аукциона')
+
 
     const { seconds, minutes, hours, days, start } = useTimer({
       expiryTimestamp,
@@ -26,12 +28,7 @@ const Timer = React.memo(({ dateNow, setDateNow, setTimerStart, timer }) => {
         setDateNow(new Date().toLocaleString());
       }, 10000); // ДЛЯ УДОБСТВА СДЕЛАЛ 1 СЕКУНДУ, ХОТЯ ДОЛЖЕН БЫТЬ 1 ЧАС, ЧТОБЫ НЕ БЫЛО РЕРЕНДЕРОВ СТРАНИЦЫ РАЗ В СЕКУНДУ!
 
-      console.log(dateNow, '-1');
-      console.log(timeRightNow); // 19:40 к примеру
-      console.log(timeRightNow, auctionStartNum)
-
-      if (dateNow.substring(0, 10) === "08.10.2022" && timeRightNow > auctionStartNum) {
-        console.log("----------------------------------------------------------------")
+      if (dateNow.substring(0, 10) === item.auctionStart.split(',')[0] && timeRightNow > Number(item.auctionStart.split(',')[1])) {
         start();
         clearInterval(interval);
         setTimerStart(true);
