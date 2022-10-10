@@ -21,37 +21,74 @@ const Alphabet = () => {
     <div className={styles.alphabet_page}>
         <Header />
         <div className={styles.alphabet_title}>
-            <p>Specialist Departments</p>
+            <h4>Specialist Departments</h4>
         </div>
         <div className={styles.alphabet_lists}>
             <div className={styles.alphabet_1column}>
                 <div className={styles.alphabet_1column_09}>
-                    <p>0-9</p>
+                    <h5>0-9</h5>
+                    <p>20th Century Sculpture</p>
                 </div>
                 <div className={styles.alphabet_1column_AC}>
-                    <p>A-C</p>
+                    <h5>A-C</h5>
+                    <p>African & Oceanic Art</p>
+                    <p>Antique Clocks & Timepieces</p>
+                    <p>Antiquities</p>
+                    <p>Arms & Armour</p>
+                    <p>Asian Art</p>
+                    <p>British & European Paintings</p>
+                    <p>Coins, Medals & Banknotes</p>
+                    <p>Contemporary & Post War Art</p>
                 </div>
                 <div className={styles.alphabet_1column_DF}>
-                    <p>D-F</p>
+                    <h5>D-F</h5>
+                    <p>Design Since 1860</p>
+                    <p>European Ceramics & Glass</p>
+                    <p>Furniture</p>
                 </div>
             </div>
             <div className={styles.alphabet_2column}>
                 <div className={styles.alphabet_2column_GJ}>
-                    <p>G-J</p>
+                    <h5>G-J</h5>
+                    <p>Islamic & Indian Art</p>
+                    <p>Jacobite & Stuart Works of Art</p>
+                    <p>Jewellery</p>
                 </div>
                 <div className={styles.alphabet_2column_KN}>
-                    <p>K-N</p>
+                    <h5>K-N</h5>
+                    <p>Lalique</p>
+                    <p>Marine Paintings</p>
+                    <p>Modern British Art</p>
+                    <p>Modern Design</p>
                 </div>
                 <div className={styles.alphabet_2column_OR}>
-                    <p>O-R</p>
+                    <h5>O-R</h5>
+                    <p>Old Masters</p>
+                    <p>Photography</p>
+                    <p>Portraiture</p>
+                    <p>Prints & Multiples</p>
+                    <p>Rare Books, Manuscripts & Maps</p>
+                    <p>Rugs & Carpets</p>
                 </div>
             </div>
             <div className={styles.alphabet_3column}>
                 <div className={styles.alphabet_3column_ST}>
-                    <p>S-T</p>
+                    <h5>S-T</h5>
+                    <p>Scientific Instruments</p>
+                    <p>Scottish Applied Arts</p>
+                    <p>Scottish Paintings & Sculpture</p>
+                    <p>Scottish Silver & Accessories</p>
+                    <p>Silver & Objects of Vertu</p>
+                    <p>Sporting Art</p>
+                    <p>Studio & Contemporary Ceramics</p>
+                    <p>Tapestries & Textiles</p>
                 </div>
                 <div className={styles.alphabet_3column_UZ}>
-                    <p>U-Z</p>
+                    <h5>U-Z</h5>
+                    <p>Vintage Posters</p>
+                    <p>Watches</p>
+                    <p>Whisky & Wine</p>
+                    <p>Works of Art & Sculpture</p>
                 </div>
             </div>
         </div>
