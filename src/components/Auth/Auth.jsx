@@ -138,6 +138,7 @@ const Auth = ({ activeAuth, setActiveAuth }) => {
           />
           <input
             value={password}
+            type="password"
             onChange={(e) => {
               setPassword(e.target.value);
             }}

@@ -1,12 +1,36 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import Timer from "../../components/Timer/Timer";
 
 import styles from "./cardProduct.module.css";
 
 
-const CardProduct = React.memo(({ item, expiryTimestamp }) => {
+const CardProduct = React.memo(({ item }) => {
 
+  const navigate = useNavigate()
+  const token = useSelector(state => state.application.token)
+
+  const [dateNow, setDateNow] = useState(new Date().toLocaleString());
+  const [timerStart, setTimerStart] = useState(false)
+  const [dateError, setDateError] = useState(false)
+  const [tokenError, setTokenError] = useState(false)
+
+  const handleAuctionAccess = (id) => {
+    if(!token) {
+      setTokenError(true)
+      return
+    }
+    if (timerStart === false) {
+      setDateError(true)
+      return
+    }
+      navigate(`/oneAuction/${id}`)
+      setDateError(false)
+      setTokenError(false)
+
+  }
+  
   return (
     <div className={styles.thing_card}>
       <div className={styles.thing_card_img}>
@@ -14,11 +38,11 @@ const CardProduct = React.memo(({ item, expiryTimestamp }) => {
       </div>
       {item.private === true ?
         <div className={styles.thing_card_time_private}>
-          <Timer expiryTimestamp={expiryTimestamp}/>
+          <Timer item={item} dateNow={dateNow} setDateNow={setDateNow} setTimerStart={setTimerStart}/>
         </div>
         :
         <div className={styles.thing_card_time_noprivate}>
-          <Timer expiryTimestamp={expiryTimestamp}/>
+          <Timer item={item} dateNow={dateNow} setDateNow={setDateNow} setTimerStart={setTimerStart}/>
         </div>
       }
 
@@ -30,7 +54,8 @@ const CardProduct = React.memo(({ item, expiryTimestamp }) => {
           <p>{item.description.substr(0, 80) + "..."}</p>
         </div>
         <div className={styles.thing_card_date}>
-          <p>Опубликовано {`${new Date(item.timeNow).toLocaleDateString()} в ${new Date(item.timeNow).toLocaleTimeString()}`}</p>
+          <p>Начало аукциона: {item.auctionStart.split(',')[0]} в {item.auctionStart.split(',')[1].substr(0,3)}:{item.auctionStart.split(',')[1].substr(3,5)}</p>
+          <p>Опубликовано 10.10.2022</p>
         </div>
       </div>
 
@@ -43,7 +68,7 @@ const CardProduct = React.memo(({ item, expiryTimestamp }) => {
             {item.private === true ? (
               <button className={styles.thing_card_private}>Приватный аукцион</button>
             ) : (
-              <Link to={`/oneAuction/${item._id}`}><button className={styles.thing_card_noprivate}>Участвовать в аукционе</button></Link>
+              <button onClick={() => {handleAuctionAccess(item._id)}} className={styles.thing_card_noprivate}>Участвовать в аукционе</button>
             )}
           </div>
           {!item.private === true ? <div className={styles.thing_card_price}>
@@ -58,7 +83,10 @@ const CardProduct = React.memo(({ item, expiryTimestamp }) => {
             <div className={styles.thing_card_btn2}>
               <button>Оформить покупку сейчас</button>
             </div>
-          }
+          } 
+
+          {dateError ? <div className={styles.errorText}>Аукцион начнется {item.auctionStart.split(',')[0]} в {item.auctionStart.split(',')[1].substr(0,3)}:{item.auctionStart.split(',')[1].substr(3,5)}</div> : null}
+          {tokenError ? <div className={styles.errorText}>Не авторизованный пользователь не может участвовать в аукционе</div> : null}
         </div>
       </div>
     </div>

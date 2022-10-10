@@ -6,7 +6,7 @@ import  styled from '../Header/header.module.css'
 import Login from '../Login/Login';
 
 const Header = React.memo(() => {
-    console.log('header render')
+
     const navigate = useNavigate()
     const token = useSelector((state) => state.application.token)
     const [activeAuth, setActiveAuth] = useState(false);
@@ -85,8 +85,7 @@ const Header = React.memo(() => {
             </ul>
         </div>
         </div>
-
-     <Auth activeAuth={activeAuth} setActiveAuth={setActiveAuth} />
+    <Auth activeAuth={activeAuth} setActiveAuth={setActiveAuth} />
     <Login activeLogin={activeLogin} setActiveLogin={setActiveLogin} />
         </>
     );
