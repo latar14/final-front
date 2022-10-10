@@ -5,6 +5,7 @@ import OneAlphabetPage from "./pages/OneAlphabetPage/OneAlphabetPage";
 
 import OneAuction from "./pages/OneAuction/OneAuction";
 import Products from "./pages/Products/Products";
+import UserProfile from "./pages/userProfile/userProfile";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/products/category/:id' element={<Products/>} />
         <Route path="/oneAuction/:id" element={<OneAuction />} />
         <Route path="/vremenno" element={<OneAlphabetPage />} />
+        <Route path="/profile" element={<UserProfile />} />
       </Routes>
     </>
   );
