@@ -1,5 +1,5 @@
 .iconsMain {
-    width: 10%;
+    width: 13%;
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
@@ -23,9 +23,9 @@
 .oneIcon {
     width: 70px;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: 2px;
     size: 50px;
-    margin-block-start: 30px;
+    margin-block-start: 2px;
 }
 .oneIcon :hover {
     color: red;
@@ -49,7 +49,7 @@
     list-style: none;
     opacity: 0.3;
 }
-.infoBids p {
+.infoBids a {
     color: black;
 }
 .mainInfoB {
@@ -70,13 +70,14 @@ display: flex;
 }
 .oneLink {
     margin-top: 21px;
-    color: red;
+    color: goldenrod;
 }
 .infoBids2 {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
     list-style: none;
+    color: black;
 }
 .lis2 {
     text-align: left;
@@ -87,5 +88,16 @@ display: flex;
     text-align: left;
 }
 .lisImg img {
-    width: 70px;
+    width: 80px;
+    color: black;
+}
+.lisImg {
+    display: flex;
+    width: 220px;
+    word-break: break-all;
+    color: black;
+    text-decoration: none;
+}
+.lisImg a {
+    color: black;
 }
