@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Онлайн-аукцион
+<p> Это групповой проект, выполненный командой разработчиков</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Функционал сайта
 
-## Available Scripts
+- Авторизация с подтверждением аккаунта через почту
+- Кабинет администратора
+- Личный кабинет пользователя
+- Фильтрация по категорим, векам, по названию товара и т.д.
+- Возможность перебивания ставки в режиме real-time
+- Возможность покупки товара
+- Панель администратора для управления серверной части
 
-In the project directory, you can run:
 
-### `npm start`
+## Авторизация
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![1](https://user-images.githubusercontent.com/105606309/196940837-0bbcd79b-0f54-41a6-8678-6b93c0516f26.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Аукцион 
 
-### `npm test`
+![2_Trim](https://user-images.githubusercontent.com/105606309/196946829-6dbea2e9-148d-4cb2-9476-0f5d17ed9606.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Запуск проекта
 
-### `npm run build`
+Для запуска проекта вам необходимо набрать команду в терминале:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```javascript
+npm i
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+После набрать команду:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```javascript
+npm start
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Технологии проекта
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [x] React
+- [x] Redux
+- [x] Redux-thunk
+- [x] React-toolkit
+- [x] Express
+- [x] Mongoose
+- [x] JSON
+- [x] React-Router
+- [x] Prettier
+- [x] Github
+- [x] TypeScript
+- [x] Node.js
+- [x] JavaScript
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ ---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Команда проекта
 
-## Learn More
+<h3>
+  <a href="https://github.com/err0rby">
+    <img alt="1" src="https://img.shields.io/badge/-Muhammad_Didaev-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h3>
+  <a href="https://github.com/MovsarTS">
+    <img alt="2" src="https://img.shields.io/badge/-Movsar_Tsokaev-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h3>
+  <a href="https://github.com/tepsurkaevIsa">
+    <img alt="3" src="https://img.shields.io/badge/-Isa_Tepsurkaev-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
 
-### Code Splitting
+<h3>
+  <a href="https://github.com/DerWaldgang">
+    <img alt="4" src="https://img.shields.io/badge/-Salambek_Makhaev-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<h3>
+  <a href="https://github.com/latar14">
+    <img alt="4" src="https://img.shields.io/badge/-Ahmed_Dzhauthanov-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
 
-### Analyzing the Bundle Size
+### В этом проекте я выполнял следующие задачи:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [x] Логика фильтрации/сортировки товаров на аукцион
+- [x] Верстка некоторых страниц
+- [x] Организовал роутинг-маршрутизацию внутри проекта
+- [x] Работал c reducer'aми из redux toolkit
+- [x] Отправлял запрос на серверную часть через redux-thunk
+- [x] Code review
