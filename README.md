@@ -85,7 +85,7 @@ npm start
 
 <h3>
   <a href="https://github.com/latar14">
-    <img alt="4" src="https://img.shields.io/badge/-Ahmed_Dzhauthanov-black?style=for-the-badge&logo=github&logoColor=white" />
+    <img alt="4" src="https://img.shields.io/badge/-Said_Akhmedov-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </h3>
 
